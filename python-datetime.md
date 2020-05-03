@@ -35,6 +35,21 @@ d.isoformat()
 d.strftime('%A %d %B %Y')
 #'Sunday 03 May 2020'
 
+"the date is {:%A %d %B %Y}".format(d)
+#'the date is Sunday 03 May 2020'
+
+# portable way
+"{date:%A} {date.day} {date:%B} {date.year}".format(date=d)
+#'Sunday 3 May 2020'
+
+>>> datetime.date.min
+datetime.date(1, 1, 1)
+>>>
+>>> datetime.date.max
+datetime.date(9999, 12, 31)
+>>>
+>>> datetime.date.resolution
+datetime.timedelta(days=1)
 
 
 # timedelta
